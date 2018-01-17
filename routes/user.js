@@ -6,10 +6,9 @@
  */
 const express = require('express');
 const router = express.Router();
-const { update, select, getEnrolls } = require('../controllers/user');
+const { create, login, getCapcha, nameRegistedOrNot } = require('../controllers/user');
 
-router.get('/activityBus', getEnrolls);
-router.get('/:id', select);
-router.put('/:id', update);
+// TODO 添加剩余的router
+router.post('/:name', nameRegistedOrNot);
 
 module.exports = router;

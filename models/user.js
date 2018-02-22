@@ -1,6 +1,5 @@
 /*
  * user.js
- * Copyright (C) 2017  <liubj@wangsu.com>
  *
  * Distributed under terms of the MIT license.
  */

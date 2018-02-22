@@ -1,6 +1,5 @@
 /*
  * user.js
- * Copyright (C) 2017  <liubj@wangsu.com>
  *
  * Distributed under terms of the MIT license.
  */
@@ -144,18 +143,6 @@ const userController = {
     });
     smsReq.write(content);
     smsReq.end();
-  },
-  
-  nameRegistedOrNot: (req, resp, next) => {
-    db.User.find({ name: req.params.name}).then(user => {
-      let registed;
-      if(user) {
-        registed = true;
-      }else {
-        registed = false;
-      }
-      resp.success({ registed });
-    }).catch(next);
   },
 
 }
